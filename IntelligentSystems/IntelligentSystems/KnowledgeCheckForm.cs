@@ -11,10 +11,14 @@ using System.IO;
 
 namespace IntelligentSystems
 {
-    public partial class Form2 : Form
+    public partial class KnowledgeCheckForm : Form
     {
-
-        public Form2(string Points, string Time)
+        /// <summary>
+        /// Инициализация KnowledgeCheckForm с последующей отрисовкой первого задания теста
+        /// </summary>
+        /// <param name="Points"></param>
+        /// <param name="Time"></param>
+        public KnowledgeCheckForm(string Points, string Time)
         {
             InitializeComponent();
             UserTask.ImageLocation = "../../Resources/1_1.jpg";
@@ -34,30 +38,27 @@ namespace IntelligentSystems
             sr = new StreamReader(path);
         }
 
-        public double[][] Answers = new double[20][];
-        public double TimeForPreparation;
-        public double DesiredPoints;
+        public double[][] Answers = new double[20][];//Массив с данными о решении задач
+        public double TimeForPreparation;//Время на подготовку
+        public double DesiredPoints;//Желаемы результат
         private int i=2, j=1, c=0;
-        public string path = "../../Resources/RightAnswers.txt";
+        public string path = "../../Resources/RightAnswers.txt";//путь к текстовому файлу с решениями
         public StreamReader sr;
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Form3 form3 = new Form3(DesiredPoints,TimeForPreparation,Answers);
-            this.Hide();
-            form3.ShowDialog();
-            //this.Show();
-            Close();
-        }
 
+        /// <summary>
+        /// Переключение задания, сохранение ввода пользователя в массив, передача массива и данных из InputForm в ResultForm
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             if (i == 21)
             {
                 i = 1;
                 j++;
-                if (j == 3)
+                if (j == 3)//конец цикла
                 {
-                    Form3 form3 = new Form3(DesiredPoints, TimeForPreparation, Answers);
+                    ResultForm form3 = new ResultForm(DesiredPoints, TimeForPreparation, Answers);
                     this.Hide();
                     form3.ShowDialog();
                     Close();
@@ -69,7 +70,7 @@ namespace IntelligentSystems
                 UserTask.ImageLocation = Name;
                 UserTask.Load();
                 
-                if (Answer.Text==sr.ReadLine())
+                if (Answer.Text==sr.ReadLine())//проверка верности введеного ответа
                 {
                     Answers[c][0]++;
                 }
@@ -83,5 +84,6 @@ namespace IntelligentSystems
                 i++;
             }
         }
+
     }
 }

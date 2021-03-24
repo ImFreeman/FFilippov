@@ -10,18 +10,22 @@ using System.Windows.Forms;
 
 namespace IntelligentSystems
 {
-    public partial class Form1 : Form
+    public partial class InputForm : Form
     {
-        public Form1()
+        public InputForm()
         {
             InitializeComponent();
         }
 
 
-        
+        /// <summary>
+        /// Передача входных данных в KnowledgeCheckForm
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2(DesiredPoints.Text, TimeForPreparation.Text);
+            KnowledgeCheckForm form2 = new KnowledgeCheckForm(DesiredPoints.Text, TimeForPreparation.Text);
             this.Hide();
             form2.ShowDialog();
             //this.Show();

@@ -1,7 +1,7 @@
 ﻿
 namespace IntelligentSystems
 {
-    partial class Form2
+    partial class KnowledgeCheckForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,11 +29,11 @@ namespace IntelligentSystems
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KnowledgeCheckForm));
             this.label1 = new System.Windows.Forms.Label();
             this.Answer = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.UserTask = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.UserTask)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,28 +71,18 @@ namespace IntelligentSystems
             this.UserTask.TabIndex = 0;
             this.UserTask.TabStop = false;
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(653, 408);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // Form2
+            // KnowledgeCheckForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Answer);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.UserTask);
-            this.Name = "Form2";
-            this.Text = "Form2";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "KnowledgeCheckForm";
+            this.Text = "Проверка знаний";
             ((System.ComponentModel.ISupportInitialize)(this.UserTask)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -105,6 +95,5 @@ namespace IntelligentSystems
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox Answer;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
     }
 }

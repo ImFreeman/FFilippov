@@ -1,7 +1,7 @@
 ﻿
 namespace IntelligentSystems
 {
-    partial class Form3
+    partial class ResultForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,7 @@ namespace IntelligentSystems
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ResultForm));
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -77,7 +78,7 @@ namespace IntelligentSystems
             this.label6.TabIndex = 38;
             this.label6.Text = "*Время, рекомендуемое для подготовки к теме задания.";
             // 
-            // Form3
+            // ResultForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -88,9 +89,10 @@ namespace IntelligentSystems
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "Form3";
-            this.Text = "Form3";
+            this.Name = "ResultForm";
+            this.Text = "Рекомендации";
             this.ResumeLayout(false);
             this.PerformLayout();
 

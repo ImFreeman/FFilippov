@@ -1,7 +1,7 @@
 ﻿
 namespace IntelligentSystems
 {
-    partial class Form1
+    partial class InputForm
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -29,6 +29,7 @@ namespace IntelligentSystems
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InputForm));
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.TimeForPreparation = new System.Windows.Forms.TextBox();
@@ -78,7 +79,7 @@ namespace IntelligentSystems
             this.label2.TabIndex = 4;
             this.label2.Text = "Введите  желаемое количество баллов:";
             // 
-            // Form1
+            // InputForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -88,8 +89,9 @@ namespace IntelligentSystems
             this.Controls.Add(this.TimeForPreparation);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "InputForm";
+            this.Text = "Помощь в распределении времени";
             this.ResumeLayout(false);
             this.PerformLayout();
 
