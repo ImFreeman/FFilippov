@@ -1,0 +1,12 @@
+E:\Папка Филиппа\Универ\Интеллектуальные системы\Лаба\ComputerConfigurator\ComputerConfigurator\bin\Debug\ComputerConfigurator.exe.config
+E:\Папка Филиппа\Универ\Интеллектуальные системы\Лаба\ComputerConfigurator\ComputerConfigurator\bin\Debug\ComputerConfigurator.exe
+E:\Папка Филиппа\Универ\Интеллектуальные системы\Лаба\ComputerConfigurator\ComputerConfigurator\bin\Debug\ComputerConfigurator.pdb
+E:\Папка Филиппа\Универ\Интеллектуальные системы\Лаба\ComputerConfigurator\ComputerConfigurator\obj\Debug\ComputerConfigurator.csprojAssemblyReference.cache
+E:\Папка Филиппа\Универ\Интеллектуальные системы\Лаба\ComputerConfigurator\ComputerConfigurator\obj\Debug\ComputerConfigurator.Form1.resources
+E:\Папка Филиппа\Универ\Интеллектуальные системы\Лаба\ComputerConfigurator\ComputerConfigurator\obj\Debug\ComputerConfigurator.Properties.Resources.resources
+E:\Папка Филиппа\Универ\Интеллектуальные системы\Лаба\ComputerConfigurator\ComputerConfigurator\obj\Debug\ComputerConfigurator.csproj.GenerateResource.cache
+E:\Папка Филиппа\Универ\Интеллектуальные системы\Лаба\ComputerConfigurator\ComputerConfigurator\obj\Debug\ComputerConfigurator.csproj.CoreCompileInputs.cache
+E:\Папка Филиппа\Универ\Интеллектуальные системы\Лаба\ComputerConfigurator\ComputerConfigurator\obj\Debug\ComputerConfigurator.exe
+E:\Папка Филиппа\Универ\Интеллектуальные системы\Лаба\ComputerConfigurator\ComputerConfigurator\obj\Debug\ComputerConfigurator.pdb
+E:\Папка Филиппа\Универ\Интеллектуальные системы\Лаба\ComputerConfigurator\ComputerConfigurator\obj\Debug\ComputerConfigurator.csproj.ResolveComReference.cache
+E:\Папка Филиппа\Универ\Интеллектуальные системы\Лаба\ComputerConfigurator\ComputerConfigurator\obj\Debug\ComputerConfigurator.Form2.resources
