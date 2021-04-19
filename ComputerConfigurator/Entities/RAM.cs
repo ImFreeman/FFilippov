@@ -6,23 +6,9 @@ using System.Threading.Tasks;
 
 namespace ComputerConfigurator
 {
-    class RAM
+    class RAM : ComputerComponent
     {
-        public string Site;
-        /// <summary>
-        /// Название
-        /// </summary>
-        public string Name { get; set; }
-
-        /// <summary>
-        /// Цена комплектующего
-        /// </summary>
-        public double Price { get; set; }
-
-        /// <summary>
-        /// Производитель
-        /// </summary>
-        public string Fabricator { get; set; }
+        
 
         /// <summary>
         /// Наличие подстветки
@@ -32,7 +18,7 @@ namespace ComputerConfigurator
         /// <summary>
         /// Объём памяти в ГБ
         /// </summary>
-        public int Memory { get; set; }
+        public string Memory { get; set; }
 
         /// <summary>
         /// Тип памяти RAM

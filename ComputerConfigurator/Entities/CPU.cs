@@ -6,28 +6,12 @@ using System.Threading.Tasks;
 
 namespace ComputerConfigurator
 {
-    class CPU
+    class CPU : ComputerComponent
     {
-        public string Site { get; set; }
-        /// <summary>
-        /// Название
-        /// </summary>
-        public string Name { get; set; }
-
-        /// <summary>
-        /// Цена комплектующего
-        /// </summary>
-        public double Price { get; set; }
-
-        /// <summary>
-        /// Производитель(Intel или AMD)
-        /// </summary>
-        public string Fabricator { get; set; }
-
         /// <summary>
         /// Количество ядер
         /// </summary>
-        public int NumberOfCores { get; set; }
+        public string NumberOfCores { get; set; }
 
         /// <summary>
         /// Наличие графического ядра

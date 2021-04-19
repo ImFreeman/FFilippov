@@ -6,27 +6,11 @@ using System.Threading.Tasks;
 
 namespace ComputerConfigurator
 {
-    class Corps
+    class Corps : ComputerComponent
     {
-        public string Site { get; set; }
-        /// <summary>
-        /// Название
-        /// </summary>
-        public string Name { get; set; }
-
-        /// <summary>
-        /// Цена комплектующего
-        /// </summary>
-        public double Price { get; set; }
-
-        /// <summary>
-        /// Производитель
-        /// </summary>
-        public string Fabricator { get; set; }
-
-        /// <summary>
-        /// Основной цвет
-        /// </summary>
+       /// <summary>
+       /// Основной цвет
+       /// </summary>
         public string MainColor { get; set; }
 
         /// <summary>

@@ -46,12 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Corps.cs" />
-    <Compile Include="Computer.cs" />
-    <Compile Include="CPU.cs" />
-    <Compile Include="GraphicsCard.cs" />
-    <Compile Include="HDD.cs" />
-    <Compile Include="MotherBoard.cs" />
+    <Compile Include="Entities\ComputerComponent.cs" />
+    <Compile Include="Entities\Corps.cs" />
+    <Compile Include="Entities\PC.cs" />
+    <Compile Include="Entities\CPU.cs" />
+    <Compile Include="Entities\GraphicsCard.cs" />
+    <Compile Include="Entities\HDD.cs" />
+    <Compile Include="Entities\MotherBoard.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,12 +65,12 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
-    <Compile Include="PowerSupply.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Entities\PowerSupply.cs" />
+    <Compile Include="Entities\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RAM.cs" />
-    <Compile Include="Settings.cs" />
-    <Compile Include="SSD.cs" />
+    <Compile Include="Entities\RAM.cs" />
+    <Compile Include="Entities\Settings.cs" />
+    <Compile Include="Entities\SSD.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

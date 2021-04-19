@@ -6,24 +6,8 @@ using System.Threading.Tasks;
 
 namespace ComputerConfigurator
 {
-    class MotherBoard
+    class MotherBoard : ComputerComponent
     {
-        public string Site { get; set; }
-
-        /// <summary>
-        /// Название
-        /// </summary>
-        public string Name { get; set; }
-
-        /// <summary>
-        /// Цена комплектующего
-        /// </summary>
-        public double Price { get; set; }
-
-        /// <summary>
-        /// Производитель
-        /// </summary>
-        public string Fabricator { get; set; }
 
 
         /// <summary>
@@ -39,17 +23,17 @@ namespace ComputerConfigurator
         /// <summary>
         /// Количество слотов памяти RAM
         /// </summary>
-        public int NumberOfMemorySlots { get; set; }
+        public string NumberOfMemorySlots { get; set; }
 
         /// <summary>
         /// Количество слотов PCI-E x16
         /// </summary>
-        public int NumberOfPCIEx16Slots { get; set; }
+        public string NumberOfPCIEx16Slots { get; set; }
 
         /// <summary>
         /// Количество слотов М.2
         /// </summary>
-        public int NumberOfM2Slots { get; set; }
+        public string NumberOfM2Slots { get; set; }
 
         /// <summary>
         /// Наличие Wi-Fi адаптера

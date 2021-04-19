@@ -10,6 +10,7 @@ namespace ComputerConfigurator
     {
         public int[] Price = new int[2];
 
+
         //Для игрового ПК:
         public string[] ForGamingPC = new string[2];
 
@@ -62,6 +63,7 @@ namespace ComputerConfigurator
         public string[] CorpsFrameSize = new string[9];
 
         //Необходимость накопителей
+        //public bool SeparateCPURequired;
         public bool HDDRequired;
         public bool SSDRequired;
 

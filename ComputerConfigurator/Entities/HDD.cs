@@ -6,26 +6,10 @@ using System.Threading.Tasks;
 
 namespace ComputerConfigurator
 {
-    class HDD
+    class HDD : ComputerComponent
     {
-        public string Site;
-        // <summary>
-        /// Название
-        /// </summary>
-        public string Name { get; set; }
-
         /// <summary>
-        /// Цена комплектующего
-        /// </summary>
-        public double Price { get; set; }
-
-        /// <summary>
-        /// Производитель
-        /// </summary>
-        public string Fabricator { get; set; }
-
-        /// <summary>
-        /// Объём памяти в ТБ
+        /// Объем памяти
         /// </summary>
         public string Memory { get; set; }
 

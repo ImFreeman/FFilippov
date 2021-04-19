@@ -141,9 +141,6 @@ namespace ComputerConfigurator
             this.GraphicsCardFabricatorBox = new System.Windows.Forms.GroupBox();
             this.GraphicsCardFabricatorList = new System.Windows.Forms.CheckedListBox();
             this.MotherBoardBox = new System.Windows.Forms.GroupBox();
-            this.MotherBoardBuildInCPUBox = new System.Windows.Forms.GroupBox();
-            this.MotherBoardBuildInCPUNo = new System.Windows.Forms.CheckBox();
-            this.MotherBoardBuildInCPUYes = new System.Windows.Forms.CheckBox();
             this.MotherBoardWiFiAdapterBox = new System.Windows.Forms.GroupBox();
             this.MotherBoardWiFiAdapterNo = new System.Windows.Forms.CheckBox();
             this.MotherBoardWiFiAdapterYes = new System.Windows.Forms.CheckBox();
@@ -180,6 +177,7 @@ namespace ComputerConfigurator
             this.CPUFabricatorBox = new System.Windows.Forms.GroupBox();
             this.CPUFabricatorAMD = new System.Windows.Forms.CheckBox();
             this.CPUFabricatorIntel = new System.Windows.Forms.CheckBox();
+            this.CPUcheckBox = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.AdvancedSettings.SuspendLayout();
@@ -218,7 +216,6 @@ namespace ComputerConfigurator
             this.GraphicsCardMemoryBox.SuspendLayout();
             this.GraphicsCardFabricatorBox.SuspendLayout();
             this.MotherBoardBox.SuspendLayout();
-            this.MotherBoardBuildInCPUBox.SuspendLayout();
             this.MotherBoardWiFiAdapterBox.SuspendLayout();
             this.MotherBoardNumberOfPCIEx16SlotsBox.SuspendLayout();
             this.MotherBoardNumberOfM2SlotsBox.SuspendLayout();
@@ -385,6 +382,7 @@ namespace ComputerConfigurator
             // 
             // AdvancedSettings
             // 
+            this.AdvancedSettings.Controls.Add(this.CPUcheckBox);
             this.AdvancedSettings.Controls.Add(this.RequiredBox);
             this.AdvancedSettings.Controls.Add(this.SSDbox);
             this.AdvancedSettings.Controls.Add(this.HDDbox);
@@ -394,9 +392,9 @@ namespace ComputerConfigurator
             this.AdvancedSettings.Controls.Add(this.GraphicsCardBox);
             this.AdvancedSettings.Controls.Add(this.MotherBoardBox);
             this.AdvancedSettings.Controls.Add(this.CPUBox);
-            this.AdvancedSettings.Location = new System.Drawing.Point(346, 13);
+            this.AdvancedSettings.Location = new System.Drawing.Point(336, 12);
             this.AdvancedSettings.Name = "AdvancedSettings";
-            this.AdvancedSettings.Size = new System.Drawing.Size(941, 992);
+            this.AdvancedSettings.Size = new System.Drawing.Size(1062, 992);
             this.AdvancedSettings.TabIndex = 12;
             this.AdvancedSettings.TabStop = false;
             this.AdvancedSettings.Text = "Расширенные настройки";
@@ -405,9 +403,9 @@ namespace ComputerConfigurator
             // 
             this.RequiredBox.Controls.Add(this.SSDcheckBox);
             this.RequiredBox.Controls.Add(this.HDDcheckBox);
-            this.RequiredBox.Location = new System.Drawing.Point(634, 835);
+            this.RequiredBox.Location = new System.Drawing.Point(752, 835);
             this.RequiredBox.Name = "RequiredBox";
-            this.RequiredBox.Size = new System.Drawing.Size(300, 150);
+            this.RequiredBox.Size = new System.Drawing.Size(233, 150);
             this.RequiredBox.TabIndex = 8;
             this.RequiredBox.TabStop = false;
             this.RequiredBox.Text = "Накопитель:";
@@ -447,7 +445,7 @@ namespace ComputerConfigurator
             this.SSDbox.Controls.Add(this.SSDFabricator);
             this.SSDbox.Location = new System.Drawing.Point(6, 835);
             this.SSDbox.Name = "SSDbox";
-            this.SSDbox.Size = new System.Drawing.Size(621, 151);
+            this.SSDbox.Size = new System.Drawing.Size(739, 151);
             this.SSDbox.TabIndex = 7;
             this.SSDbox.TabStop = false;
             this.SSDbox.Text = "SSD";
@@ -458,7 +456,7 @@ namespace ComputerConfigurator
             this.SSDReadSpeedBox.Controls.Add(this.label24);
             this.SSDReadSpeedBox.Controls.Add(this.SSDReadSpeedMin);
             this.SSDReadSpeedBox.Controls.Add(this.label25);
-            this.SSDReadSpeedBox.Location = new System.Drawing.Point(436, 19);
+            this.SSDReadSpeedBox.Location = new System.Drawing.Point(546, 19);
             this.SSDReadSpeedBox.Name = "SSDReadSpeedBox";
             this.SSDReadSpeedBox.Size = new System.Drawing.Size(179, 126);
             this.SSDReadSpeedBox.TabIndex = 25;
@@ -508,7 +506,7 @@ namespace ComputerConfigurator
             this.SSDWriteSpeedBox.Controls.Add(this.label22);
             this.SSDWriteSpeedBox.Location = new System.Drawing.Point(143, 88);
             this.SSDWriteSpeedBox.Name = "SSDWriteSpeedBox";
-            this.SSDWriteSpeedBox.Size = new System.Drawing.Size(287, 57);
+            this.SSDWriteSpeedBox.Size = new System.Drawing.Size(400, 57);
             this.SSDWriteSpeedBox.TabIndex = 24;
             this.SSDWriteSpeedBox.TabStop = false;
             this.SSDWriteSpeedBox.Text = "Скорость записи(Мбайт/сек):";
@@ -565,7 +563,7 @@ namespace ComputerConfigurator
             this.SSDMemoryBox.Controls.Add(this.label15);
             this.SSDMemoryBox.Location = new System.Drawing.Point(143, 19);
             this.SSDMemoryBox.Name = "SSDMemoryBox";
-            this.SSDMemoryBox.Size = new System.Drawing.Size(287, 63);
+            this.SSDMemoryBox.Size = new System.Drawing.Size(400, 63);
             this.SSDMemoryBox.TabIndex = 19;
             this.SSDMemoryBox.TabStop = false;
             this.SSDMemoryBox.Text = "Объём(Гб):";
@@ -674,7 +672,7 @@ namespace ComputerConfigurator
             this.HDDbox.Controls.Add(this.HDDMemoryBox);
             this.HDDbox.Location = new System.Drawing.Point(6, 660);
             this.HDDbox.Name = "HDDbox";
-            this.HDDbox.Size = new System.Drawing.Size(621, 169);
+            this.HDDbox.Size = new System.Drawing.Size(668, 169);
             this.HDDbox.TabIndex = 6;
             this.HDDbox.TabStop = false;
             this.HDDbox.Text = "Жесткий диск";
@@ -688,7 +686,7 @@ namespace ComputerConfigurator
             this.HDDLevelOfNoiseBox.Controls.Add(this.label18);
             this.HDDLevelOfNoiseBox.Location = new System.Drawing.Point(94, 20);
             this.HDDLevelOfNoiseBox.Name = "HDDLevelOfNoiseBox";
-            this.HDDLevelOfNoiseBox.Size = new System.Drawing.Size(253, 60);
+            this.HDDLevelOfNoiseBox.Size = new System.Drawing.Size(267, 60);
             this.HDDLevelOfNoiseBox.TabIndex = 22;
             this.HDDLevelOfNoiseBox.TabStop = false;
             this.HDDLevelOfNoiseBox.Text = "Уровень шума(Дб):";
@@ -739,7 +737,7 @@ namespace ComputerConfigurator
             // HDDBufferSizeBox
             // 
             this.HDDBufferSizeBox.Controls.Add(this.HDDBufferSizeList);
-            this.HDDBufferSizeBox.Location = new System.Drawing.Point(353, 20);
+            this.HDDBufferSizeBox.Location = new System.Drawing.Point(367, 18);
             this.HDDBufferSizeBox.Name = "HDDBufferSizeBox";
             this.HDDBufferSizeBox.Size = new System.Drawing.Size(95, 145);
             this.HDDBufferSizeBox.TabIndex = 21;
@@ -762,7 +760,7 @@ namespace ComputerConfigurator
             // HDDFabricatorBox
             // 
             this.HDDFabricatorBox.Controls.Add(this.HDDFabricatorList);
-            this.HDDFabricatorBox.Location = new System.Drawing.Point(454, 20);
+            this.HDDFabricatorBox.Location = new System.Drawing.Point(468, 20);
             this.HDDFabricatorBox.Name = "HDDFabricatorBox";
             this.HDDFabricatorBox.Size = new System.Drawing.Size(161, 143);
             this.HDDFabricatorBox.TabIndex = 20;
@@ -790,7 +788,7 @@ namespace ComputerConfigurator
             this.HDDDataExchangeRateBox.Controls.Add(this.label12);
             this.HDDDataExchangeRateBox.Location = new System.Drawing.Point(94, 87);
             this.HDDDataExchangeRateBox.Name = "HDDDataExchangeRateBox";
-            this.HDDDataExchangeRateBox.Size = new System.Drawing.Size(253, 78);
+            this.HDDDataExchangeRateBox.Size = new System.Drawing.Size(267, 78);
             this.HDDDataExchangeRateBox.TabIndex = 18;
             this.HDDDataExchangeRateBox.TabStop = false;
             this.HDDDataExchangeRateBox.Text = "Скорость обмена данными(Мбайт/сек):";
@@ -870,9 +868,9 @@ namespace ComputerConfigurator
             this.CorpsBox.Controls.Add(this.CorpsBacklightBox);
             this.CorpsBox.Controls.Add(this.CorpsWindowBox);
             this.CorpsBox.Controls.Add(this.CorpsFabricatorBox);
-            this.CorpsBox.Location = new System.Drawing.Point(635, 451);
+            this.CorpsBox.Location = new System.Drawing.Point(683, 451);
             this.CorpsBox.Name = "CorpsBox";
-            this.CorpsBox.Size = new System.Drawing.Size(300, 380);
+            this.CorpsBox.Size = new System.Drawing.Size(302, 380);
             this.CorpsBox.TabIndex = 5;
             this.CorpsBox.TabStop = false;
             this.CorpsBox.Text = "Корпус";
@@ -1056,9 +1054,9 @@ namespace ComputerConfigurator
             this.PowerSupplyBox.Controls.Add(this.PowerSupplyDetachableCablesBox);
             this.PowerSupplyBox.Controls.Add(this.PowerSupplyWireBraidingBox);
             this.PowerSupplyBox.Controls.Add(this.PowerSupplyBacklightBox);
-            this.PowerSupplyBox.Location = new System.Drawing.Point(321, 401);
+            this.PowerSupplyBox.Location = new System.Drawing.Point(372, 401);
             this.PowerSupplyBox.Name = "PowerSupplyBox";
-            this.PowerSupplyBox.Size = new System.Drawing.Size(306, 252);
+            this.PowerSupplyBox.Size = new System.Drawing.Size(302, 252);
             this.PowerSupplyBox.TabIndex = 4;
             this.PowerSupplyBox.TabStop = false;
             this.PowerSupplyBox.Text = "Блок питания";
@@ -1114,7 +1112,7 @@ namespace ComputerConfigurator
             this.PowerSupplyDetachableCablesBox.Controls.Add(this.PowerSupplyDetachableCablesNo);
             this.PowerSupplyDetachableCablesBox.Location = new System.Drawing.Point(7, 179);
             this.PowerSupplyDetachableCablesBox.Name = "PowerSupplyDetachableCablesBox";
-            this.PowerSupplyDetachableCablesBox.Size = new System.Drawing.Size(293, 67);
+            this.PowerSupplyDetachableCablesBox.Size = new System.Drawing.Size(286, 67);
             this.PowerSupplyDetachableCablesBox.TabIndex = 18;
             this.PowerSupplyDetachableCablesBox.TabStop = false;
             this.PowerSupplyDetachableCablesBox.Text = "Отстёгивающиеся кабели:";
@@ -1149,7 +1147,7 @@ namespace ComputerConfigurator
             this.PowerSupplyWireBraidingBox.Controls.Add(this.PowerSupplyWireBraidingYes);
             this.PowerSupplyWireBraidingBox.Location = new System.Drawing.Point(140, 19);
             this.PowerSupplyWireBraidingBox.Name = "PowerSupplyWireBraidingBox";
-            this.PowerSupplyWireBraidingBox.Size = new System.Drawing.Size(160, 81);
+            this.PowerSupplyWireBraidingBox.Size = new System.Drawing.Size(153, 81);
             this.PowerSupplyWireBraidingBox.TabIndex = 17;
             this.PowerSupplyWireBraidingBox.TabStop = false;
             this.PowerSupplyWireBraidingBox.Text = "Оплётка проводов:";
@@ -1184,7 +1182,7 @@ namespace ComputerConfigurator
             this.PowerSupplyBacklightBox.Controls.Add(this.PowerSupplyBacklightYes);
             this.PowerSupplyBacklightBox.Location = new System.Drawing.Point(140, 106);
             this.PowerSupplyBacklightBox.Name = "PowerSupplyBacklightBox";
-            this.PowerSupplyBacklightBox.Size = new System.Drawing.Size(158, 67);
+            this.PowerSupplyBacklightBox.Size = new System.Drawing.Size(153, 67);
             this.PowerSupplyBacklightBox.TabIndex = 16;
             this.PowerSupplyBacklightBox.TabStop = false;
             this.PowerSupplyBacklightBox.Text = "Подсветка";
@@ -1220,9 +1218,9 @@ namespace ComputerConfigurator
             this.RAMBox.Controls.Add(this.RAMMemoryTypeBox);
             this.RAMBox.Controls.Add(this.RAMBacklightBox);
             this.RAMBox.Controls.Add(this.RAMMemoryBox);
-            this.RAMBox.Location = new System.Drawing.Point(6, 382);
+            this.RAMBox.Location = new System.Drawing.Point(6, 280);
             this.RAMBox.Name = "RAMBox";
-            this.RAMBox.Size = new System.Drawing.Size(309, 271);
+            this.RAMBox.Size = new System.Drawing.Size(361, 373);
             this.RAMBox.TabIndex = 3;
             this.RAMBox.TabStop = false;
             this.RAMBox.Text = "Оперативная память";
@@ -1230,9 +1228,9 @@ namespace ComputerConfigurator
             // RAMFabricatorBox
             // 
             this.RAMFabricatorBox.Controls.Add(this.RAMFabricatorList);
-            this.RAMFabricatorBox.Location = new System.Drawing.Point(7, 20);
+            this.RAMFabricatorBox.Location = new System.Drawing.Point(7, 22);
             this.RAMFabricatorBox.Name = "RAMFabricatorBox";
-            this.RAMFabricatorBox.Size = new System.Drawing.Size(121, 153);
+            this.RAMFabricatorBox.Size = new System.Drawing.Size(121, 338);
             this.RAMFabricatorBox.TabIndex = 18;
             this.RAMFabricatorBox.TabStop = false;
             this.RAMFabricatorBox.Text = "Производитель:";
@@ -1265,15 +1263,15 @@ namespace ComputerConfigurator
             "Transcend"});
             this.RAMFabricatorList.Location = new System.Drawing.Point(6, 18);
             this.RAMFabricatorList.Name = "RAMFabricatorList";
-            this.RAMFabricatorList.Size = new System.Drawing.Size(108, 124);
+            this.RAMFabricatorList.Size = new System.Drawing.Size(108, 304);
             this.RAMFabricatorList.TabIndex = 17;
             // 
             // RAMMemoryTypeBox
             // 
             this.RAMMemoryTypeBox.Controls.Add(this.RAMMemoryTypeList);
-            this.RAMMemoryTypeBox.Location = new System.Drawing.Point(6, 179);
+            this.RAMMemoryTypeBox.Location = new System.Drawing.Point(134, 183);
             this.RAMMemoryTypeBox.Name = "RAMMemoryTypeBox";
-            this.RAMMemoryTypeBox.Size = new System.Drawing.Size(297, 86);
+            this.RAMMemoryTypeBox.Size = new System.Drawing.Size(219, 126);
             this.RAMMemoryTypeBox.TabIndex = 16;
             this.RAMMemoryTypeBox.TabStop = false;
             this.RAMMemoryTypeBox.Text = "Тип памяти";
@@ -1290,16 +1288,16 @@ namespace ComputerConfigurator
             this.RAMMemoryTypeList.Location = new System.Drawing.Point(7, 19);
             this.RAMMemoryTypeList.MultiColumn = true;
             this.RAMMemoryTypeList.Name = "RAMMemoryTypeList";
-            this.RAMMemoryTypeList.Size = new System.Drawing.Size(283, 64);
+            this.RAMMemoryTypeList.Size = new System.Drawing.Size(204, 94);
             this.RAMMemoryTypeList.TabIndex = 0;
             // 
             // RAMBacklightBox
             // 
             this.RAMBacklightBox.Controls.Add(this.RAMBacklightNo);
             this.RAMBacklightBox.Controls.Add(this.RAMBacklightYes);
-            this.RAMBacklightBox.Location = new System.Drawing.Point(134, 19);
+            this.RAMBacklightBox.Location = new System.Drawing.Point(231, 19);
             this.RAMBacklightBox.Name = "RAMBacklightBox";
-            this.RAMBacklightBox.Size = new System.Drawing.Size(169, 44);
+            this.RAMBacklightBox.Size = new System.Drawing.Size(122, 154);
             this.RAMBacklightBox.TabIndex = 15;
             this.RAMBacklightBox.TabStop = false;
             this.RAMBacklightBox.Text = "Подсветка:";
@@ -1309,7 +1307,7 @@ namespace ComputerConfigurator
             this.RAMBacklightNo.AutoSize = true;
             this.RAMBacklightNo.Checked = true;
             this.RAMBacklightNo.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.RAMBacklightNo.Location = new System.Drawing.Point(65, 19);
+            this.RAMBacklightNo.Location = new System.Drawing.Point(15, 75);
             this.RAMBacklightNo.Name = "RAMBacklightNo";
             this.RAMBacklightNo.Size = new System.Drawing.Size(45, 17);
             this.RAMBacklightNo.TabIndex = 3;
@@ -1321,7 +1319,7 @@ namespace ComputerConfigurator
             this.RAMBacklightYes.AutoSize = true;
             this.RAMBacklightYes.Checked = true;
             this.RAMBacklightYes.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.RAMBacklightYes.Location = new System.Drawing.Point(9, 19);
+            this.RAMBacklightYes.Location = new System.Drawing.Point(15, 30);
             this.RAMBacklightYes.Name = "RAMBacklightYes";
             this.RAMBacklightYes.Size = new System.Drawing.Size(50, 17);
             this.RAMBacklightYes.TabIndex = 2;
@@ -1331,9 +1329,9 @@ namespace ComputerConfigurator
             // RAMMemoryBox
             // 
             this.RAMMemoryBox.Controls.Add(this.RAMMemoryList);
-            this.RAMMemoryBox.Location = new System.Drawing.Point(134, 69);
+            this.RAMMemoryBox.Location = new System.Drawing.Point(134, 19);
             this.RAMMemoryBox.Name = "RAMMemoryBox";
-            this.RAMMemoryBox.Size = new System.Drawing.Size(169, 104);
+            this.RAMMemoryBox.Size = new System.Drawing.Size(91, 154);
             this.RAMMemoryBox.TabIndex = 14;
             this.RAMMemoryBox.TabStop = false;
             this.RAMMemoryBox.Text = "Объём(ГБ):";
@@ -1352,7 +1350,7 @@ namespace ComputerConfigurator
             "128"});
             this.RAMMemoryList.Location = new System.Drawing.Point(9, 19);
             this.RAMMemoryList.Name = "RAMMemoryList";
-            this.RAMMemoryList.Size = new System.Drawing.Size(139, 79);
+            this.RAMMemoryList.Size = new System.Drawing.Size(72, 124);
             this.RAMMemoryList.TabIndex = 0;
             // 
             // GraphicsCardBox
@@ -1367,9 +1365,9 @@ namespace ComputerConfigurator
             this.GraphicsCardBox.Controls.Add(this.GraphicsCardFabricatorOfGPUBox);
             this.GraphicsCardBox.Controls.Add(this.GraphicsCardMemoryBox);
             this.GraphicsCardBox.Controls.Add(this.GraphicsCardFabricatorBox);
-            this.GraphicsCardBox.Location = new System.Drawing.Point(634, 18);
+            this.GraphicsCardBox.Location = new System.Drawing.Point(680, 18);
             this.GraphicsCardBox.Name = "GraphicsCardBox";
-            this.GraphicsCardBox.Size = new System.Drawing.Size(300, 427);
+            this.GraphicsCardBox.Size = new System.Drawing.Size(305, 427);
             this.GraphicsCardBox.TabIndex = 2;
             this.GraphicsCardBox.TabStop = false;
             this.GraphicsCardBox.Text = "Видеокарта";
@@ -1574,7 +1572,6 @@ namespace ComputerConfigurator
             // MotherBoardBox
             // 
             this.MotherBoardBox.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.MotherBoardBox.Controls.Add(this.MotherBoardBuildInCPUBox);
             this.MotherBoardBox.Controls.Add(this.MotherBoardWiFiAdapterBox);
             this.MotherBoardBox.Controls.Add(this.MotherBoardNumberOfPCIEx16SlotsBox);
             this.MotherBoardBox.Controls.Add(this.MotherBoardNumberOfM2SlotsBox);
@@ -1582,55 +1579,20 @@ namespace ComputerConfigurator
             this.MotherBoardBox.Controls.Add(this.MotherBoardNumberOfMemorySlotsBox);
             this.MotherBoardBox.Controls.Add(this.MotherBoardCPUTypeBox);
             this.MotherBoardBox.Controls.Add(this.MotherBoardFabricatorBox);
-            this.MotherBoardBox.Location = new System.Drawing.Point(321, 19);
+            this.MotherBoardBox.Location = new System.Drawing.Point(372, 19);
             this.MotherBoardBox.Name = "MotherBoardBox";
-            this.MotherBoardBox.Size = new System.Drawing.Size(306, 376);
+            this.MotherBoardBox.Size = new System.Drawing.Size(302, 376);
             this.MotherBoardBox.TabIndex = 1;
             this.MotherBoardBox.TabStop = false;
             this.MotherBoardBox.Text = "Материнская плата";
-            // 
-            // MotherBoardBuildInCPUBox
-            // 
-            this.MotherBoardBuildInCPUBox.Controls.Add(this.MotherBoardBuildInCPUNo);
-            this.MotherBoardBuildInCPUBox.Controls.Add(this.MotherBoardBuildInCPUYes);
-            this.MotherBoardBuildInCPUBox.Location = new System.Drawing.Point(165, 301);
-            this.MotherBoardBuildInCPUBox.Name = "MotherBoardBuildInCPUBox";
-            this.MotherBoardBuildInCPUBox.Size = new System.Drawing.Size(135, 69);
-            this.MotherBoardBuildInCPUBox.TabIndex = 7;
-            this.MotherBoardBuildInCPUBox.TabStop = false;
-            this.MotherBoardBuildInCPUBox.Text = "Встроенный процессор:";
-            // 
-            // MotherBoardBuildInCPUNo
-            // 
-            this.MotherBoardBuildInCPUNo.AutoSize = true;
-            this.MotherBoardBuildInCPUNo.Checked = true;
-            this.MotherBoardBuildInCPUNo.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.MotherBoardBuildInCPUNo.Location = new System.Drawing.Point(63, 39);
-            this.MotherBoardBuildInCPUNo.Name = "MotherBoardBuildInCPUNo";
-            this.MotherBoardBuildInCPUNo.Size = new System.Drawing.Size(45, 17);
-            this.MotherBoardBuildInCPUNo.TabIndex = 9;
-            this.MotherBoardBuildInCPUNo.Text = "Нет";
-            this.MotherBoardBuildInCPUNo.UseVisualStyleBackColor = true;
-            // 
-            // MotherBoardBuildInCPUYes
-            // 
-            this.MotherBoardBuildInCPUYes.AutoSize = true;
-            this.MotherBoardBuildInCPUYes.Checked = true;
-            this.MotherBoardBuildInCPUYes.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.MotherBoardBuildInCPUYes.Location = new System.Drawing.Point(6, 39);
-            this.MotherBoardBuildInCPUYes.Name = "MotherBoardBuildInCPUYes";
-            this.MotherBoardBuildInCPUYes.Size = new System.Drawing.Size(50, 17);
-            this.MotherBoardBuildInCPUYes.TabIndex = 8;
-            this.MotherBoardBuildInCPUYes.Text = "Есть";
-            this.MotherBoardBuildInCPUYes.UseVisualStyleBackColor = true;
             // 
             // MotherBoardWiFiAdapterBox
             // 
             this.MotherBoardWiFiAdapterBox.Controls.Add(this.MotherBoardWiFiAdapterNo);
             this.MotherBoardWiFiAdapterBox.Controls.Add(this.MotherBoardWiFiAdapterYes);
-            this.MotherBoardWiFiAdapterBox.Location = new System.Drawing.Point(7, 329);
+            this.MotherBoardWiFiAdapterBox.Location = new System.Drawing.Point(165, 295);
             this.MotherBoardWiFiAdapterBox.Name = "MotherBoardWiFiAdapterBox";
-            this.MotherBoardWiFiAdapterBox.Size = new System.Drawing.Size(151, 41);
+            this.MotherBoardWiFiAdapterBox.Size = new System.Drawing.Size(135, 75);
             this.MotherBoardWiFiAdapterBox.TabIndex = 6;
             this.MotherBoardWiFiAdapterBox.TabStop = false;
             this.MotherBoardWiFiAdapterBox.Text = "Адаптер Wi-Fi:";
@@ -1640,7 +1602,7 @@ namespace ComputerConfigurator
             this.MotherBoardWiFiAdapterNo.AutoSize = true;
             this.MotherBoardWiFiAdapterNo.Checked = true;
             this.MotherBoardWiFiAdapterNo.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.MotherBoardWiFiAdapterNo.Location = new System.Drawing.Point(64, 19);
+            this.MotherBoardWiFiAdapterNo.Location = new System.Drawing.Point(6, 48);
             this.MotherBoardWiFiAdapterNo.Name = "MotherBoardWiFiAdapterNo";
             this.MotherBoardWiFiAdapterNo.Size = new System.Drawing.Size(45, 17);
             this.MotherBoardWiFiAdapterNo.TabIndex = 1;
@@ -1664,7 +1626,7 @@ namespace ComputerConfigurator
             this.MotherBoardNumberOfPCIEx16SlotsBox.Controls.Add(this.MotherBoardNumberOfPCIEx16SlotsList);
             this.MotherBoardNumberOfPCIEx16SlotsBox.Location = new System.Drawing.Point(165, 162);
             this.MotherBoardNumberOfPCIEx16SlotsBox.Name = "MotherBoardNumberOfPCIEx16SlotsBox";
-            this.MotherBoardNumberOfPCIEx16SlotsBox.Size = new System.Drawing.Size(135, 133);
+            this.MotherBoardNumberOfPCIEx16SlotsBox.Size = new System.Drawing.Size(135, 127);
             this.MotherBoardNumberOfPCIEx16SlotsBox.TabIndex = 5;
             this.MotherBoardNumberOfPCIEx16SlotsBox.TabStop = false;
             this.MotherBoardNumberOfPCIEx16SlotsBox.Text = "Слотов PCI-E x16:";
@@ -1687,7 +1649,7 @@ namespace ComputerConfigurator
             // MotherBoardNumberOfM2SlotsBox
             // 
             this.MotherBoardNumberOfM2SlotsBox.Controls.Add(this.MotherBoardNumberOfM2SlotsList);
-            this.MotherBoardNumberOfM2SlotsBox.Location = new System.Drawing.Point(7, 204);
+            this.MotherBoardNumberOfM2SlotsBox.Location = new System.Drawing.Point(6, 251);
             this.MotherBoardNumberOfM2SlotsBox.Name = "MotherBoardNumberOfM2SlotsBox";
             this.MotherBoardNumberOfM2SlotsBox.Size = new System.Drawing.Size(151, 119);
             this.MotherBoardNumberOfM2SlotsBox.TabIndex = 4;
@@ -1712,7 +1674,7 @@ namespace ComputerConfigurator
             // MotherBoardMemoryTypeBox
             // 
             this.MotherBoardMemoryTypeBox.Controls.Add(this.MotherBoardMemoryTypeList);
-            this.MotherBoardMemoryTypeBox.Location = new System.Drawing.Point(7, 116);
+            this.MotherBoardMemoryTypeBox.Location = new System.Drawing.Point(6, 163);
             this.MotherBoardMemoryTypeBox.Name = "MotherBoardMemoryTypeBox";
             this.MotherBoardMemoryTypeBox.Size = new System.Drawing.Size(150, 82);
             this.MotherBoardMemoryTypeBox.TabIndex = 3;
@@ -1781,7 +1743,7 @@ namespace ComputerConfigurator
             this.MotherBoardFabricatorBox.Controls.Add(this.MotherBoardFabricatorList);
             this.MotherBoardFabricatorBox.Location = new System.Drawing.Point(7, 19);
             this.MotherBoardFabricatorBox.Name = "MotherBoardFabricatorBox";
-            this.MotherBoardFabricatorBox.Size = new System.Drawing.Size(151, 90);
+            this.MotherBoardFabricatorBox.Size = new System.Drawing.Size(151, 138);
             this.MotherBoardFabricatorBox.TabIndex = 0;
             this.MotherBoardFabricatorBox.TabStop = false;
             this.MotherBoardFabricatorBox.Text = "Производитель:";
@@ -1798,7 +1760,7 @@ namespace ComputerConfigurator
             "MSI"});
             this.MotherBoardFabricatorList.Location = new System.Drawing.Point(6, 19);
             this.MotherBoardFabricatorList.Name = "MotherBoardFabricatorList";
-            this.MotherBoardFabricatorList.Size = new System.Drawing.Size(134, 64);
+            this.MotherBoardFabricatorList.Size = new System.Drawing.Size(134, 94);
             this.MotherBoardFabricatorList.TabIndex = 0;
             // 
             // CPUBox
@@ -1810,9 +1772,9 @@ namespace ComputerConfigurator
             this.CPUBox.Controls.Add(this.CPUGraphicCoreBox);
             this.CPUBox.Controls.Add(this.CPUCoresBox);
             this.CPUBox.Controls.Add(this.CPUFabricatorBox);
-            this.CPUBox.Location = new System.Drawing.Point(6, 19);
+            this.CPUBox.Location = new System.Drawing.Point(6, 48);
             this.CPUBox.Name = "CPUBox";
-            this.CPUBox.Size = new System.Drawing.Size(309, 352);
+            this.CPUBox.Size = new System.Drawing.Size(353, 226);
             this.CPUBox.TabIndex = 0;
             this.CPUBox.TabStop = false;
             this.CPUBox.Text = "Процессор";
@@ -1821,9 +1783,9 @@ namespace ComputerConfigurator
             // 
             this.CPUMultithreadingBox.Controls.Add(this.CPUMultithreadingNo);
             this.CPUMultithreadingBox.Controls.Add(this.CPUMultithreadingYes);
-            this.CPUMultithreadingBox.Location = new System.Drawing.Point(6, 296);
+            this.CPUMultithreadingBox.Location = new System.Drawing.Point(221, 19);
             this.CPUMultithreadingBox.Name = "CPUMultithreadingBox";
-            this.CPUMultithreadingBox.Size = new System.Drawing.Size(297, 46);
+            this.CPUMultithreadingBox.Size = new System.Drawing.Size(126, 50);
             this.CPUMultithreadingBox.TabIndex = 14;
             this.CPUMultithreadingBox.TabStop = false;
             this.CPUMultithreadingBox.Text = "Многопоточность:";
@@ -1833,7 +1795,7 @@ namespace ComputerConfigurator
             this.CPUMultithreadingNo.AutoSize = true;
             this.CPUMultithreadingNo.Checked = true;
             this.CPUMultithreadingNo.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.CPUMultithreadingNo.Location = new System.Drawing.Point(61, 19);
+            this.CPUMultithreadingNo.Location = new System.Drawing.Point(62, 19);
             this.CPUMultithreadingNo.Name = "CPUMultithreadingNo";
             this.CPUMultithreadingNo.Size = new System.Drawing.Size(45, 17);
             this.CPUMultithreadingNo.TabIndex = 1;
@@ -1845,7 +1807,7 @@ namespace ComputerConfigurator
             this.CPUMultithreadingYes.AutoSize = true;
             this.CPUMultithreadingYes.Checked = true;
             this.CPUMultithreadingYes.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.CPUMultithreadingYes.Location = new System.Drawing.Point(5, 19);
+            this.CPUMultithreadingYes.Location = new System.Drawing.Point(6, 19);
             this.CPUMultithreadingYes.Name = "CPUMultithreadingYes";
             this.CPUMultithreadingYes.Size = new System.Drawing.Size(50, 17);
             this.CPUMultithreadingYes.TabIndex = 0;
@@ -1859,9 +1821,9 @@ namespace ComputerConfigurator
             this.CPUBaseFrequencyBox.Controls.Add(this.label5);
             this.CPUBaseFrequencyBox.Controls.Add(this.CPUBaseFrequencyMin);
             this.CPUBaseFrequencyBox.Controls.Add(this.label6);
-            this.CPUBaseFrequencyBox.Location = new System.Drawing.Point(6, 226);
+            this.CPUBaseFrequencyBox.Location = new System.Drawing.Point(13, 153);
             this.CPUBaseFrequencyBox.Name = "CPUBaseFrequencyBox";
-            this.CPUBaseFrequencyBox.Size = new System.Drawing.Size(297, 64);
+            this.CPUBaseFrequencyBox.Size = new System.Drawing.Size(334, 64);
             this.CPUBaseFrequencyBox.TabIndex = 15;
             this.CPUBaseFrequencyBox.TabStop = false;
             this.CPUBaseFrequencyBox.Text = "Базовая частота(МГц)";
@@ -1913,9 +1875,9 @@ namespace ComputerConfigurator
             // 
             this.CPUMemoryTypeBox.Controls.Add(this.CPUMemoryTypeDDR4);
             this.CPUMemoryTypeBox.Controls.Add(this.CPUMemoryTypeDDR3);
-            this.CPUMemoryTypeBox.Location = new System.Drawing.Point(127, 162);
+            this.CPUMemoryTypeBox.Location = new System.Drawing.Point(221, 75);
             this.CPUMemoryTypeBox.Name = "CPUMemoryTypeBox";
-            this.CPUMemoryTypeBox.Size = new System.Drawing.Size(176, 51);
+            this.CPUMemoryTypeBox.Size = new System.Drawing.Size(126, 72);
             this.CPUMemoryTypeBox.TabIndex = 14;
             this.CPUMemoryTypeBox.TabStop = false;
             this.CPUMemoryTypeBox.Text = "Тип памяти:";
@@ -1925,7 +1887,7 @@ namespace ComputerConfigurator
             this.CPUMemoryTypeDDR4.AutoSize = true;
             this.CPUMemoryTypeDDR4.Checked = true;
             this.CPUMemoryTypeDDR4.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.CPUMemoryTypeDDR4.Location = new System.Drawing.Point(69, 19);
+            this.CPUMemoryTypeDDR4.Location = new System.Drawing.Point(68, 31);
             this.CPUMemoryTypeDDR4.Name = "CPUMemoryTypeDDR4";
             this.CPUMemoryTypeDDR4.Size = new System.Drawing.Size(56, 17);
             this.CPUMemoryTypeDDR4.TabIndex = 1;
@@ -1937,7 +1899,7 @@ namespace ComputerConfigurator
             this.CPUMemoryTypeDDR3.AutoSize = true;
             this.CPUMemoryTypeDDR3.Checked = true;
             this.CPUMemoryTypeDDR3.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.CPUMemoryTypeDDR3.Location = new System.Drawing.Point(6, 19);
+            this.CPUMemoryTypeDDR3.Location = new System.Drawing.Point(5, 31);
             this.CPUMemoryTypeDDR3.Name = "CPUMemoryTypeDDR3";
             this.CPUMemoryTypeDDR3.Size = new System.Drawing.Size(56, 17);
             this.CPUMemoryTypeDDR3.TabIndex = 0;
@@ -1948,9 +1910,9 @@ namespace ComputerConfigurator
             // 
             this.CPUGraphicCoreBox.Controls.Add(this.CPUGraphicCoreNo);
             this.CPUGraphicCoreBox.Controls.Add(this.CPUGraphicCoreYes);
-            this.CPUGraphicCoreBox.Location = new System.Drawing.Point(6, 143);
+            this.CPUGraphicCoreBox.Location = new System.Drawing.Point(13, 75);
             this.CPUGraphicCoreBox.Name = "CPUGraphicCoreBox";
-            this.CPUGraphicCoreBox.Size = new System.Drawing.Size(115, 70);
+            this.CPUGraphicCoreBox.Size = new System.Drawing.Size(115, 72);
             this.CPUGraphicCoreBox.TabIndex = 13;
             this.CPUGraphicCoreBox.TabStop = false;
             this.CPUGraphicCoreBox.Text = "Графическое ядро:";
@@ -1982,9 +1944,9 @@ namespace ComputerConfigurator
             // CPUCoresBox
             // 
             this.CPUCoresBox.Controls.Add(this.CPUCoresList);
-            this.CPUCoresBox.Location = new System.Drawing.Point(127, 19);
+            this.CPUCoresBox.Location = new System.Drawing.Point(134, 19);
             this.CPUCoresBox.Name = "CPUCoresBox";
-            this.CPUCoresBox.Size = new System.Drawing.Size(176, 137);
+            this.CPUCoresBox.Size = new System.Drawing.Size(81, 128);
             this.CPUCoresBox.TabIndex = 12;
             this.CPUCoresBox.TabStop = false;
             this.CPUCoresBox.Text = "Ядер:";
@@ -2003,16 +1965,16 @@ namespace ComputerConfigurator
             this.CPUCoresList.Location = new System.Drawing.Point(6, 13);
             this.CPUCoresList.MultiColumn = true;
             this.CPUCoresList.Name = "CPUCoresList";
-            this.CPUCoresList.Size = new System.Drawing.Size(163, 109);
+            this.CPUCoresList.Size = new System.Drawing.Size(60, 109);
             this.CPUCoresList.TabIndex = 0;
             // 
             // CPUFabricatorBox
             // 
             this.CPUFabricatorBox.Controls.Add(this.CPUFabricatorAMD);
             this.CPUFabricatorBox.Controls.Add(this.CPUFabricatorIntel);
-            this.CPUFabricatorBox.Location = new System.Drawing.Point(6, 19);
+            this.CPUFabricatorBox.Location = new System.Drawing.Point(13, 19);
             this.CPUFabricatorBox.Name = "CPUFabricatorBox";
-            this.CPUFabricatorBox.Size = new System.Drawing.Size(115, 118);
+            this.CPUFabricatorBox.Size = new System.Drawing.Size(115, 50);
             this.CPUFabricatorBox.TabIndex = 11;
             this.CPUFabricatorBox.TabStop = false;
             this.CPUFabricatorBox.Text = "Производитель:";
@@ -2022,7 +1984,7 @@ namespace ComputerConfigurator
             this.CPUFabricatorAMD.AutoSize = true;
             this.CPUFabricatorAMD.Checked = true;
             this.CPUFabricatorAMD.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.CPUFabricatorAMD.Location = new System.Drawing.Point(13, 37);
+            this.CPUFabricatorAMD.Location = new System.Drawing.Point(6, 17);
             this.CPUFabricatorAMD.Name = "CPUFabricatorAMD";
             this.CPUFabricatorAMD.Size = new System.Drawing.Size(50, 17);
             this.CPUFabricatorAMD.TabIndex = 1;
@@ -2034,12 +1996,25 @@ namespace ComputerConfigurator
             this.CPUFabricatorIntel.AutoSize = true;
             this.CPUFabricatorIntel.Checked = true;
             this.CPUFabricatorIntel.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.CPUFabricatorIntel.Location = new System.Drawing.Point(13, 71);
+            this.CPUFabricatorIntel.Location = new System.Drawing.Point(62, 17);
             this.CPUFabricatorIntel.Name = "CPUFabricatorIntel";
             this.CPUFabricatorIntel.Size = new System.Drawing.Size(46, 17);
             this.CPUFabricatorIntel.TabIndex = 2;
             this.CPUFabricatorIntel.Text = "Intel";
             this.CPUFabricatorIntel.UseVisualStyleBackColor = true;
+            // 
+            // CPUcheckBox
+            // 
+            this.CPUcheckBox.AutoSize = true;
+            this.CPUcheckBox.Checked = true;
+            this.CPUcheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.CPUcheckBox.Location = new System.Drawing.Point(19, 25);
+            this.CPUcheckBox.Name = "CPUcheckBox";
+            this.CPUcheckBox.Size = new System.Drawing.Size(207, 17);
+            this.CPUcheckBox.TabIndex = 9;
+            this.CPUcheckBox.Text = "Процессор не встроен в процессор";
+            this.CPUcheckBox.UseVisualStyleBackColor = true;
+            this.CPUcheckBox.CheckedChanged += new System.EventHandler(this.CPUcheckBox_CheckedChanged);
             // 
             // Form1
             // 
@@ -2047,7 +2022,7 @@ namespace ComputerConfigurator
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1305, 1061);
+            this.ClientSize = new System.Drawing.Size(1328, 1011);
             this.Controls.Add(this.AdvancedSettings);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.groupBox2);
@@ -2059,6 +2034,7 @@ namespace ComputerConfigurator
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.AdvancedSettings.ResumeLayout(false);
+            this.AdvancedSettings.PerformLayout();
             this.RequiredBox.ResumeLayout(false);
             this.RequiredBox.PerformLayout();
             this.SSDbox.ResumeLayout(false);
@@ -2106,8 +2082,6 @@ namespace ComputerConfigurator
             this.GraphicsCardMemoryBox.ResumeLayout(false);
             this.GraphicsCardFabricatorBox.ResumeLayout(false);
             this.MotherBoardBox.ResumeLayout(false);
-            this.MotherBoardBuildInCPUBox.ResumeLayout(false);
-            this.MotherBoardBuildInCPUBox.PerformLayout();
             this.MotherBoardWiFiAdapterBox.ResumeLayout(false);
             this.MotherBoardWiFiAdapterBox.PerformLayout();
             this.MotherBoardNumberOfPCIEx16SlotsBox.ResumeLayout(false);
@@ -2173,7 +2147,6 @@ namespace ComputerConfigurator
         private System.Windows.Forms.GroupBox GraphicsCardMemoryBox;
         private System.Windows.Forms.GroupBox GraphicsCardFabricatorBox;
         private System.Windows.Forms.GroupBox MotherBoardBox;
-        private System.Windows.Forms.GroupBox MotherBoardBuildInCPUBox;
         private System.Windows.Forms.GroupBox MotherBoardWiFiAdapterBox;
         private System.Windows.Forms.GroupBox MotherBoardNumberOfPCIEx16SlotsBox;
         private System.Windows.Forms.GroupBox MotherBoardNumberOfM2SlotsBox;
@@ -2264,8 +2237,6 @@ namespace ComputerConfigurator
         private System.Windows.Forms.CheckBox CPUMemoryTypeDDR3;
         private System.Windows.Forms.CheckBox CPUGraphicCoreNo;
         private System.Windows.Forms.CheckBox CPUGraphicCoreYes;
-        private System.Windows.Forms.CheckBox MotherBoardBuildInCPUNo;
-        private System.Windows.Forms.CheckBox MotherBoardBuildInCPUYes;
         private System.Windows.Forms.CheckBox MotherBoardWiFiAdapterNo;
         private System.Windows.Forms.CheckBox MotherBoardWiFiAdapterYes;
         private System.Windows.Forms.CheckedListBox GraphicsCardFabricatorOfGPUList;
@@ -2284,6 +2255,7 @@ namespace ComputerConfigurator
         private System.Windows.Forms.CheckedListBox HDDBufferSizeList;
         private System.Windows.Forms.CheckedListBox HDDFabricatorList;
         private System.Windows.Forms.CheckedListBox HDDMemoryList;
+        private System.Windows.Forms.CheckBox CPUcheckBox;
     }
 }
 

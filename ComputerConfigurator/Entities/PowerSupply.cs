@@ -6,23 +6,9 @@ using System.Threading.Tasks;
 
 namespace ComputerConfigurator
 {
-    class PowerSupply
+    class PowerSupply : ComputerComponent
     {
-        public string Site { get; set; }
-        /// <summary>
-        /// Название
-        /// </summary>
-        public string Name { get; set; }
-
-        /// <summary>
-        /// Цена комплектующего
-        /// </summary>
-        public double Price { get; set; }
-
-        /// <summary>
-        /// Производитель
-        /// </summary>
-        public string Fabricator { get; set; }
+        
 
         /// <summary>
         /// Мощность блока

@@ -7,33 +7,17 @@ using System.Threading.Tasks;
 namespace ComputerConfigurator
 {
     
-    class GraphicsCard
+    class GraphicsCard : ComputerComponent
     {
-        public string Site { get; set; }
         /// <summary>
-        /// Название
-        /// </summary>
-        public string Name { get; set; }
-
-        /// <summary>
-        /// Цена комплектующего
-        /// </summary>
-        public double Price { get; set; }
-
-        /// <summary>
-        /// Производитель
-        /// </summary>
-        public string Fabricator { get; set; }
-
-        /// <summary>
-        /// Рекомендуемая мощность блока питания
+        /// Рекомендуемое питание
         /// </summary>
         public int RecommendedEnergy { get; set; }
 
         /// <summary>
         /// Объём памяти в ГБ
         /// </summary>
-        public int Memory { get; set; }
+        public string Memory { get; set; }
 
         /// <summary>
         /// Тип памяти
@@ -48,7 +32,7 @@ namespace ComputerConfigurator
         /// <summary>
         /// Количество одновременно работающих мониторов
         /// </summary>
-        public int NumberOfMonitors { get; set; }
+        public string NumberOfMonitors { get; set; }
 
         /// <summary>
         /// Версия PCI Express

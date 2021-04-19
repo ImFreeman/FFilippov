@@ -215,9 +215,7 @@ namespace ComputerConfigurator
 
         }
 
-        private Settings settings = new Settings()
-        {
-        };       
+        private Settings settings = new Settings();       
         
         private void AdvancedSettingsButton_Click(object sender, EventArgs e)
         {
@@ -311,8 +309,9 @@ namespace ComputerConfigurator
             if (MotherBoardWiFiAdapterYes.Checked == true) { set.MotherBoardWiFiAdapter[0] = "Да"; } else { set.MotherBoardWiFiAdapter[0] = "NULL"; }
             if (MotherBoardWiFiAdapterNo.Checked == true) { set.MotherBoardWiFiAdapter[1] = "Нет"; } else { set.MotherBoardWiFiAdapter[1] = "NULL"; }
             //MotherBoardBuildInCPU
-            if (MotherBoardBuildInCPUYes.Checked == true) { set.MotherBoardBuildInCPU[0] = "Да"; } else { set.MotherBoardBuildInCPU[0] = "NULL"; }
-            if (MotherBoardBuildInCPUNo.Checked == true) { set.MotherBoardBuildInCPU[1] = "Нет"; } else { set.MotherBoardBuildInCPU[1] = "NULL"; }
+            if (CPUcheckBox.Checked) { set.MotherBoardBuildInCPU[0] = "Да"; set.MotherBoardBuildInCPU[1] = "NULL"; } else { set.MotherBoardBuildInCPU[0] = "NULL"; set.MotherBoardBuildInCPU[1] = "Нет"; }
+            /*if (MotherBoardBuildInCPUYes.Checked == true) { set.MotherBoardBuildInCPU[0] = "Да"; } else { set.MotherBoardBuildInCPU[0] = "NULL"; }
+            if (MotherBoardBuildInCPUNo.Checked == true) { set.MotherBoardBuildInCPU[1] = "Нет"; } else { set.MotherBoardBuildInCPU[1] = "NULL"; }*/
 
             //GraphicsCard
             //GraphicsCardFabricator
@@ -404,16 +403,28 @@ namespace ComputerConfigurator
         private void button9_Click(object sender, EventArgs e)
         {
             SetSettings(settings);
-            //Form2 form2 = new Form2(settings);
-            //this.Hide();
-            //form2.ShowDialog();
-            //Close();
+            Form2 form2 = new Form2(settings);
+            this.Hide();
+            form2.ShowDialog();
+            Close();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             settings.ForGamingPC[0] = "Да";
-            settings.ForGamingPC[0] = "NULL";
+            //settings.ForGamingPC[0] = "NULL";
+        }
+
+        private void CPUcheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if(CPUBox.Visible)
+            {
+                CPUBox.Visible = false;
+            }
+            else
+            {
+                CPUBox.Visible = true;
+            }
         }
     }
 }

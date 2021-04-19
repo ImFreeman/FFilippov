@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ComputerConfigurator
 {
-    class Computer
+    class PC
     {
         public MotherBoard motherBoard = new MotherBoard();
         public CPU processor = new CPU();
