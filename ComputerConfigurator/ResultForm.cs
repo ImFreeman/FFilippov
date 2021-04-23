@@ -1330,6 +1330,11 @@ namespace ComputerConfigurator
             else { throw new Exception("Непонятная штука."); }
         }
 
+        /// <summary>
+        /// Изменение в ComboBox
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void VariantsComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             MBlabel.Text = computers[VariantsComboBox.SelectedIndex].motherBoard.Name;

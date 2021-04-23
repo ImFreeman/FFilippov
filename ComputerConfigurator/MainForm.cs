@@ -1275,6 +1275,11 @@ namespace ComputerConfigurator
             SSDReadSpeedMax.Text = "3480";
         }
 
+        /// <summary>
+        /// Нажата кнопка "3D графика"
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void GraphicsButton_Click(object sender, EventArgs e)
         {
             OfficeButton.BackColor = SystemColors.Control;

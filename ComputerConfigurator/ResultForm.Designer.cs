@@ -329,7 +329,7 @@ namespace ComputerConfigurator
             this.Controls.Add(this.MBlabel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ResultForm";
-            this.Text = "Form2";
+            this.Text = "Результат";
             this.ResumeLayout(false);
             this.PerformLayout();
 
