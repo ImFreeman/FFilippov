@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace ComputerConfigurator
 {
+    /// <summary>
+    /// Комплектующее. Абстрактный базовый класс.
+    /// </summary>
     public abstract class ComputerComponent
     {
+        public List<string> Properties = new List<string>();
         public string Site { get; set; }
         /// <summary>
         /// Название

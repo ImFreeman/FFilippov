@@ -6,13 +6,15 @@ using System.Threading.Tasks;
 
 namespace ComputerConfigurator
 {
-    
+    /// <summary>
+    /// Комплектующее типа "Видеокарта"
+    /// </summary>
     class GraphicsCard : ComputerComponent
     {
         /// <summary>
         /// Рекомендуемое питание
         /// </summary>
-        public int RecommendedEnergy { get; set; }
+        public double RecommendedEnergy { get; set; }
 
         /// <summary>
         /// Объём памяти в ГБ
@@ -42,7 +44,7 @@ namespace ComputerConfigurator
         /// <summary>
         /// Разрядность шины памяти(бит)
         /// </summary>
-        public int MemoryBusWidth { get; set; }
+        public double MemoryBusWidth { get; set; }
 
         /// <summary>
         /// Для игрового ПК

@@ -6,10 +6,14 @@ using System.Threading.Tasks;
 
 namespace ComputerConfigurator
 {
+    /// <summary>
+    /// Список настроек пользователя
+    /// </summary>
     public class Settings
     {
-        public int[] Price = new int[2];
+        public double[] Price = new double[2];
 
+        public int NumberOfPCs { get; set; }
 
         //Для игрового ПК:
         public string[] ForGamingPC = new string[2];
@@ -19,7 +23,7 @@ namespace ComputerConfigurator
         public string[] CPUCores = new string[7];
         public string[] CPUGraphicCore = new string[2];
         public string[] CPUMemoryType = new string[2];
-        public int[] CPUBaseFrequency = new int[2];
+        public double[] CPUBaseFrequency = new double[2];
         public string[] CPUMultithreading = new string[2];        
         
 
@@ -41,7 +45,7 @@ namespace ComputerConfigurator
         public string[] GraphicsCardFabricatorOfGPU = new string[2];
         public string[] GraphicsCardNumberOfMonitors = new string[3];
         public string[] GraphicsCardPCIExpress = new string[3];
-        public int[] GraphicsCardMemoryBusWidth = new int[2];
+        public double[] GraphicsCardMemoryBusWidth = new double[2];
 
         //RAM настройки
         public string[] RAMFabricator = new string[21];
@@ -69,16 +73,16 @@ namespace ComputerConfigurator
 
         //HHD настройки
         public string[] HDDMemory = new string[5];
-        public int[] HDDLevelOfNoise = new int[2];
-        public int[] HDDDataExchangeRate = new int[2];
+        public double[] HDDLevelOfNoise = new double[2];
+        public double[] HDDDataExchangeRate = new double[2];
         public string[] HDDFabricator = new string[3];
         public string[] HDDBufferSize = new string[4];
 
 
         //SSD настройки
         public string[] SSDFabricator = new string[32];
-        public int[] SSDMemory = new int[2];
-        public int[] SSDWriteSpeed = new int[2];
-        public int[] SSDReadSpeed = new int[2];
+        public double[] SSDMemory = new double[2];
+        public double[] SSDWriteSpeed = new double[2];
+        public double[] SSDReadSpeed = new double[2];
     }
 }

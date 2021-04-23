@@ -6,23 +6,24 @@ using System.Threading.Tasks;
 
 namespace ComputerConfigurator
 {
+    /// <summary>
+    /// Комплектующее типа "SSD"
+    /// </summary>
     class SSD : ComputerComponent
-    {
-       
-
+    {      
         /// <summary>
         /// Объём памяти в ГБ
         /// </summary>
-        public int Memory { get; set; }
+        public double Memory { get; set; }
 
         /// <summary>
         /// Скорость записи(Мбайт/сек)
         /// </summary>
-        public int WriteSpeed { get; set; }
+        public double WriteSpeed { get; set; }
 
         /// <summary>
         /// Скорость чтения(Мбайт/сек)
         /// </summary>
-        public int ReadSpeed { get; set; }
+        public double ReadSpeed { get; set; }
     }
 }

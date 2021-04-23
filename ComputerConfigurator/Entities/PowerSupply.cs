@@ -6,14 +6,15 @@ using System.Threading.Tasks;
 
 namespace ComputerConfigurator
 {
+    /// <summary>
+    /// Комплектующее типа "Блок питания"
+    /// </summary>
     class PowerSupply : ComputerComponent
-    {
-        
-
+    {       
         /// <summary>
         /// Мощность блока
         /// </summary>
-        public int Energy { get; set; }
+        public double Energy { get; set; }
 
         /// <summary>
         /// Наличие оплётки проводов

@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace ComputerConfigurator
 {
+    /// <summary>
+    /// Комплектующее типа "HDD"
+    /// </summary>
     class HDD : ComputerComponent
     {
         /// <summary>
@@ -21,7 +24,7 @@ namespace ComputerConfigurator
         /// <summary>
         /// Скорость обмена данными(Мбайт/сек)
         /// </summary>
-        public int DataExchangeRate { get; set; }
+        public double DataExchangeRate { get; set; }
 
         /// <summary>
         /// Объём буфера(Мб)

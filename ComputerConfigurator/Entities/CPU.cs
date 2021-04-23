@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace ComputerConfigurator
 {
+    /// <summary>
+    /// Комплектующее типа "Процессор"
+    /// </summary>
     class CPU : ComputerComponent
     {
         /// <summary>
@@ -26,7 +29,7 @@ namespace ComputerConfigurator
         /// <summary>
         /// Базовая частота
         /// </summary>
-        public int BaseFrequency { get; set; }
+        public double BaseFrequency { get; set; }
 
         /// <summary>
         /// Наличие мультипоточности

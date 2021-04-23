@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace ComputerConfigurator
 {
+    /// <summary>
+    /// Комплектующее типа "Оперативная память/RAM"
+    /// </summary>
     class RAM : ComputerComponent
-    {
-        
-
+    {        
         /// <summary>
         /// Наличие подстветки
         /// </summary>

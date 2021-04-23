@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace ComputerConfigurator
 {
+    /// <summary>
+    /// Комплектующее типа "Материнская плата"
+    /// </summary>
     class MotherBoard : ComputerComponent
     {
-
-
         /// <summary>
         /// Вид процессора (AMD или Intel)
         /// </summary>

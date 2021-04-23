@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace ComputerConfigurator
 {
+    /// <summary>
+    /// Комплектующее типа "Корпус"
+    /// </summary>
     class Corps : ComputerComponent
     {
        /// <summary>
